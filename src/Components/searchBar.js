@@ -16,17 +16,16 @@ export default function SearchBar() {
     dispatch(getMovies(`${SearchApi}${searchTerm}`));
   };
   return (
-    <div className={"searchContainer"}>
-      <SearchIcon fontSize="medium" style={{ color: "#fff" }} />
-      <form>
-        <input
-          variant="outlined"
-          className={"searchInput"}
-          type="text"
-          placeholder={"Search Movie"}
-          onChange={(e) => searchMovie(e)}
-        />
-      </form>
-    </div>
+    <form className={"searchContainer"}>
+      <SearchIcon fontSize="large" style={{ color: "#fff" }} />
+
+      <input
+        variant="outlined"
+        className={"searchInput"}
+        type="text"
+        placeholder={"Search Movie"}
+        onChange={(e) => searchMovie(e)}
+      />
+    </form>
   );
 }
